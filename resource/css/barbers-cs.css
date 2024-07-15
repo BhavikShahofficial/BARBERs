@@ -8,6 +8,20 @@ html{
     font-size: 62.5%;
 }
 
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #009688;
+    border-radius: 10px;
+    border: 3px solid #f1f1f1;
+}
+
                                          /* Banner Start */
 
 #banner{
@@ -209,7 +223,8 @@ nav ul li a{
 .feature-text p{
     padding: 0 2rem;
     text-align: initial;
-    font-size:  1.2rem;
+    font-size:  1.6rem;
+    font-family: 'Rubik', monospace;
 }
 
                                               /* Features End */
@@ -282,7 +297,7 @@ hr{
 }
 
 .single-service:hover .service-desc{
-bottom: 40%;
+bottom: 30%;
 opacity: 1;
 }
 
@@ -304,10 +319,11 @@ opacity: 1;
 
 .testimonial-col{
     flex-basis: 28%;
+    height: 20rem;
     padding: 1rem;
     margin-bottom: 3rem;
     border-radius: 0.5rem;
-    box-shadow: 0 1rem 2rem 0.3rem #00968814;
+    box-shadow: 0 1rem 2rem 0.3rem #00968754;
     cursor: pointer;
     transition: transform 0.5s;
 }
@@ -348,6 +364,7 @@ opacity: 1;
     padding: 10rem 0 2rem;
     background: #efefef;
     position: relative;
+    font-family: 'Rubik' sans-serif;
 }
 
 .footer-row{
@@ -392,11 +409,17 @@ opacity: 1;
     position: absolute;
     left: 50%;
     top: 60%;
+    z-index: 98;
     transform: translate(-50%,-50%);
 }
 
 .social-links{
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: .5s;
 }
 
 .social-links .fa{
@@ -405,9 +428,9 @@ opacity: 1;
     font-size: 2rem;
     line-height: 4rem;
     border: 0.1rem solid #009688;
-    margin: 4rem 0.5rem 0;
     color: #009688;
     transition: .5s;
+    z-index: 99;
 }
 
 .social-links .fa:hover{
@@ -417,68 +440,224 @@ opacity: 1;
       cursor: pointer;
 }
 
-.social-links p{
-    font-size: 1.2rem;
+.copyright{
+    font-size: 1.5rem;
     margin-top: 2rem;
+    text-align: center;
+    font-family: 'Rubik';
 }
 
                                    /* footer End  */
 
 
                                     /* Responsive */
+@media screen and (min-width:1920px) {
+    #sidenav {
+        width: 70rem;
+    }
+
+    nav ul li {
+
+        font-size: 9rem;
+    }
+
+    .logo {
+        width: 35rem;
+        position: absolute;
+        top: 4%;
+        left: 10%;
+    }
+
+    #menubtn {
+        width: 10rem;
+        height: 10rem;
+        right: 8rem;
+        top: 6rem;
+    }
+
+    #menubtn img {
+        width: 5rem;
+        margin-top: 2.5rem;
+    }
+
+    .banner-text h1 {
+        font-size: 30rem;
+        font-family: 'Kaushan Script',cursive;
+    }
+
+    .banner-text p {
+        font-size: 6rem;
+        font-style: italic;
+    }
+
+    .banner-btn a {
+        width: 30rem;
+        font-size: 4rem;
+        border: 0.2rem solid white;
+    }
+
+    .title-text p {
+        font-size: 6rem;
+    }
+
+    .title-text p::after {
+        content: '';
+        width: 5rem;
+        height: 3.5rem;
+        background: linear-gradient(#019587,#fff);
+        position: absolute;
+        top: -0.9rem;
+        left: 0;
+        z-index: -1;
+        transform: rotate(10deg);
+        border-top-left-radius: 3.5rem;
+        border-bottom-right-radius: 3.5rem;
+    }
+
+    .title-text h1 {
+        font-size: 10rem;
+    }
+
+    .feature-desc {
+        margin-bottom: 10rem;
+    }
+
+    .feature h1 {
+        font-size: 6rem;
+    }
+
+    .feature-text p {
+        font-size: 4rem;
+    }
+
+    .feature-icon{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .feature-icon .fa {
+        width: 10rem;
+        height: 10rem;
+        font-size: 6rem;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .service-desc h3{
+        font-size:4.5rem;
+    }
+
+    .service-desc p {
+        font-size: 3rem;
+    }
+
+    .testimonial-col {
+        height: auto;
+    }
+
+    .user-info h4,
+    .user-info  h4 .fa{
+        font-size: 5rem;
+    }
+
+    .user img {
+        width: 12rem;
+        margin-right: 4rem;
+        border-radius: 0.3rem;
+    }
+
+    .user-info small{
+        font-size: 4rem;
+    }
+
+    .testimonial-col p {
+        font-size: 4rem;
+    }
+
+    .footer-row h1 {
+        font-size: 9rem;
+    }
+
+    .footer-row p{
+        font-size: 3rem;
+       line-height: 5.5rem;
+    }
+
+    .footer-img {
+        max-width: 67rem;
+    }
+
+    .social-links .fa {
+        height: 12rem;
+        width: 12rem;
+        font-size: 6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .copyright {
+        font-size: 4.5rem;
+        margin-top: 2rem;
+        text-align: center;
+        font-family: 'Rubik';
+    }
+}
 
 @media screen and (max-width:770px) {
     .banner-text h1 {
         font-size: 4.4rem;
     }
+
      .banner-btn a {
         display: block;
         margin: 2rem auto;
     }
-}
 
-@media screen  and (max-width: 770px){
     .title-text h1 {
         font-size: 3.5rem;
     }
+
     .feature{
         flex-basis: 100%;
     }
+
     .features-img{
         flex-basis: 100%;
     }
+
     .features-img img{
         width: 100%;
     }
-}
 
-@media screen  and (max-width: 770px){
     .single-service{
         flex-basis: 100%;
         margin-bottom: 3rem;
     }
+
     .service-desc p{
         font-size: 1.2rem;
     }
+
     hr{
         margin: 0.5rem auto;
     }
+
     .single-service:hover .service-desc{
         bottom: 25% !important;
     }
-}
 
-@media screen  and (max-width: 770px){
     .testimonial-col{
         flex-basis: 100%;
     }
-}
 
-@media screen  and (max-width: 770px){
     .footer-left,.footer-right{
         flex-basis: 100%;
         font-size: 1.4rem;
     }
+
     .footer-img{
         top: 25%;
     }
